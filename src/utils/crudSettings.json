@@ -1,0 +1,12 @@
+{
+  "currentPage": 1,
+  "perPage": 5,
+  "pageOptions": [
+    5,
+    10,
+    15
+  ],
+  "showModal": false,
+  "msgBtn": "Registrar",
+  "toogleFilter": false
+}

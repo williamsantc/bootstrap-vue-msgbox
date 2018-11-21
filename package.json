@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-vue-msgbox",
+  "version": "0.0.1-alpha2.1",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name bootstrap-vue-msgbox ./src/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "bootstrap": "^4.1.2",
+    "bootstrap-vue": "^2.0.0-rc.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-standard": "^3.0.5",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "main": "./dist/bootstrap-vue-msgbox.umd.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "keywords": [
+    "msgbox",
+    "vue-msgbox",
+    "bootstrap-msgbox"
+
+  ]
+}
