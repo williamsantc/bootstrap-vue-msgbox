@@ -2,6 +2,7 @@
   <b-modal :title="title" no-close-on-esc
            no-close-on-backdrop
            hide-header-close
+           @hidden="sendResponse"
             v-model="showModal">
     <div v-if="isHtml" v-html="content"></div>
     <p v-else>{{ content }}</p>
@@ -126,7 +127,8 @@ export default {
       showModal: false,
       input: '',
       dirty: false,
-      emitValue: ''
+      emitValue: '',
+      returnValue: ''
     }
   },
   computed: {
@@ -148,18 +150,12 @@ export default {
   },
   methods: {
     isExist,
+    sendResponse: function () {
+      this.cb(this.returnValue)
+    },
     toggle: function ($event, value) {
+      this.returnValue = value
       this.showModal = !this.showModal
-
-      if (this.showModal) {
-        return
-      }
-
-      Vue.nextTick(() => {
-        this.$emit('input', false)
-        this.$emit('hide', value)
-        this.cb(value)
-      })
     },
     validate: function () {
       this.dirty = true
