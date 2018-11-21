@@ -9,11 +9,11 @@
   <template v-if="type === TYPES.PROMPT">
     <b-form-group :invalid-feedback="(isExist(inputError) ? inputError : '')"
                   :valid-feedback="validFeedback"
-                  :state="!inputNotValid">
+                  :state="(!inputNotValid ? inputNotValid : null)">
       <b-form-input ref="input"
           :type="inputType"
           v-model="input"
-          :state="!inputNotValid"
+          :state="(!inputNotValid ? inputNotValid : null)"
           required
           data-action="auto-focus"></b-form-input>
     </b-form-group>
@@ -80,7 +80,7 @@ export default {
     },
     inputType: {
       type: String,
-      default: ''
+      default: 'text'
     },
     okText: {
       type: String,
@@ -135,7 +135,7 @@ export default {
       return this.validates(this.input)
     },
     inputNotValid: function () {
-      return this.isExist(this.inputError)
+      return !this.isExist(this.inputError)
     },
     okBtnText: function () {
       return this.okText || 'Ok'

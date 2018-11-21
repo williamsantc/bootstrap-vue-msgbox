@@ -54,7 +54,3 @@ this.$confirm({
           console.log(cancel)
         })
 ```
-
-## Issues
-
-The prompt method launch a warn on the console with the type of modal (Prompt).
