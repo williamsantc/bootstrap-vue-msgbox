@@ -19,18 +19,18 @@
     </b-form-group>
   </template>
   <div slot="modal-footer" v-if="type===TYPES.ALERT">
-    <b-button class="float-right m-1" size="sm" :variant="okType" data-action="auto-focus" @click="toggle($event, 'ok')">
+    <b-button class="float-right m-1" :variant="okType" data-action="auto-focus" @click="toggle($event, 'ok')">
       {{ okBtnText }}
     </b-button>
   </div>
   <div slot="modal-footer" v-else>
-    <b-button class="float-right m-1" size="sm" :variant="cancelType" @click="toggle($event, 'cancel')">
+    <b-button class="float-right m-1" :variant="cancelType" @click="toggle($event, 'cancel')">
       {{ cancelBtnText }}
     </b-button>
-    <b-button class="float-right m-1" size="sm" v-if="type===TYPES.CONFIRM" :variant="okType" data-action="auto-focus" @click="toggle($event, 'ok')">
+    <b-button class="float-right m-1" v-if="type===TYPES.CONFIRM" :variant="okType" data-action="auto-focus" @click="toggle($event, 'ok')">
       {{ okBtnText }}
     </b-button>
-    <b-button class="float-right m-1" size="sm" v-else :variant="okType" @click="validate">
+    <b-button class="float-right m-1" v-else :variant="okType" @click="validate">
       {{ okBtnText }}
     </b-button>
   </div>
