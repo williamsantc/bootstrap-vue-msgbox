@@ -24,7 +24,7 @@ Default Injection
 ## Methods
 
 ```js
-  (main.js)
+
   this.$alert({
     // options...
   })
@@ -42,12 +42,12 @@ Default Injection
 ## Usage
 ```js
 this.$confirm({
-        title: 'this is a titlle',
+        title: 'this is a title',
         content: 'this is a content'
       })
-        .then(success => {
+        .then(sucess => {
           // Ok button pressed
-          console.log(success)
+          console.log(sucess)
         })
         .catch(cancel => {
           // Cancel button pressed

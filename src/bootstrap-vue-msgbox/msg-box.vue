@@ -40,7 +40,6 @@
 <script>
 import { TYPES } from './constants'
 import { isExist } from '../utils/objectUtils'
-import Vue from 'vue'
 
 // bootstrap vue single components
 import bModal from 'bootstrap-vue/es/components/modal/modal'
