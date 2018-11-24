@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-vue-msgbox",
   "description": "Message box for Vue.js using Bootstrap v4",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -33,11 +33,11 @@
     "vue-msgbox",
     "bootstrap-msgbox"
   ],
-  "license" : "ISC",
+  "license": "ISC",
   "author": "William Santos <williamdejesus98@gmail.com>",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/williamsantc/bootstrap-vue-msgbox"
+    "type": "git",
+    "url": "https://github.com/williamsantc/bootstrap-vue-msgbox"
   },
   "homepage": "https://github.com/williamsantc/bootstrap-vue-msgbox"
 }

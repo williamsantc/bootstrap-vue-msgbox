@@ -1,6 +1,6 @@
 #  bootstrap-vue-msgbox
 
-  Modal message with bootstrap 4 based on https://uiv.wxsm.space/message-box
+  Modal message with bootstrap 4 based on https://uiv.wxsm.space/message-box for Vue.js
 
 ## Instalation
 
@@ -41,11 +41,11 @@ Default Injection
 
 ## Usage
 ```js
-this.$confirm({
+      this.$confirm({
         title: 'this is a title',
         content: 'this is a content'
       })
-        .then(sucess => {
+        .then(success => {
           // Ok button pressed
           console.log(sucess)
         })
@@ -53,4 +53,39 @@ this.$confirm({
           // Cancel button pressed
           console.log(cancel)
         })
+
+      // Example from the original component: 
+      this.$prtompt({
+        title: 'Welcome',
+        content: 'Please input your email:',
+        // A simple input validator
+        // returns the err msg (not valid) or null (valid)
+        validator (value) {
+          return /\S+@\S+\.\S+/.test(value) ? null : 'Email address is not valid!'
+        }
+      })
+        .then(success => {
+          // user input
+          console.log(sucess)
+        })
+        .catch(cancel => {
+          // Cancel button pressed
+          console.log(cancel)
+        })
 ```
+
+## Options
+
+|   Option              | Type          | Default       |
+|-----------------------|---------------|:-------------:|
+|**title**              | String        | `Title`       |
+|**isHtml**             | Boolean       | `false`       |
+|**content**            | String        | `Empty`       |
+|**inputType**          | String        | `text`        |
+|**okText**             | String        | `Ok`          |
+|**okType**             | String        | `primary`     |
+|**cancelText**         | String        | `primary`     |
+|**cancelType**         | String        | `default`     |
+|**validates**          | Function      | `() => null`  |
+|**defaultInputValue**  | String        | ``            |
+|**modalSize**          | String        | ``            |

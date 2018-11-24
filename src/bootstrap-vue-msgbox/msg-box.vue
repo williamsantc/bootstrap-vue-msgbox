@@ -3,6 +3,7 @@
            no-close-on-backdrop
            hide-header-close
            @hidden="sendResponse"
+           :size="modalSize"
             v-model="showModal">
     <div v-if="isHtml" v-html="content"></div>
     <p v-else>{{ content }}</p>
@@ -68,7 +69,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: 'Title'
     },
     isHtml: {
       type: Boolean,
@@ -76,7 +77,7 @@ export default {
     },
     content: {
       type: String,
-      default: ''
+      default: 'Empty'
     },
     inputType: {
       type: String,
@@ -84,7 +85,7 @@ export default {
     },
     okText: {
       type: String,
-      default: ''
+      default: 'Ok'
     },
     okType: {
       type: String,
@@ -92,7 +93,7 @@ export default {
     },
     cancelText: {
       type: String,
-      default: ''
+      default: 'Cancel'
     },
     cancelType: {
       type: String,
@@ -115,9 +116,9 @@ export default {
       type: String,
       default: ''
     },
-    size: {
+    modalSize: {
       type: String,
-      default: 'sm'
+      default: ''
     }
   },
   data: function () {
