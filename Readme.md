@@ -33,7 +33,7 @@ Default Injection
     // options...
   })
 
-  this.$prtompt({
+  this.$prompt({
     // options...
   })
   
@@ -55,12 +55,12 @@ Default Injection
         })
 
       // Example from the original component: 
-      this.$prtompt({
+      this.$prompt({
         title: 'Welcome',
         content: 'Please input your email:',
         // A simple input validator
         // returns the err msg (not valid) or null (valid)
-        validator (value) {
+        validates (value) {
           return /\S+@\S+\.\S+/.test(value) ? null : 'Email address is not valid!'
         }
       })
